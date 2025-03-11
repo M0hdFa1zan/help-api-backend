@@ -54,11 +54,7 @@ app.use((req, res) => {
 });
 
 const PORT = process.env.PORT || 8080;
-mongoose.connect('mongodb+srv://Billybucha:Omlanda5@cluster0.qauqfyi.mongodb.net/?appName=mongosh+2.0.0')
-    .then(() => {
-        console.log('Connected to MongoDB');
+
         app.listen(PORT, () => {
             console.log(`Server is running on port ${PORT}`);
         });
-    })
-    .catch((err) => console.log('Failed to connect to MongoDB', err));
